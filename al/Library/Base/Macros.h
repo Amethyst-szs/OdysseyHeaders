@@ -84,4 +84,5 @@
 #define FE_62(WHAT, X0, X1, ...) WHAT(X0, X1) FE_61(WHAT, X0, __VA_ARGS__)
 #define FE_63(WHAT, X0, X1, ...) WHAT(X0, X1) FE_62(WHAT, X0, __VA_ARGS__)
 
+#undef FOR_EACH
 #define FOR_EACH(action, x0, ...) VFUNC(FE_, __VA_ARGS__)(action, x0, __VA_ARGS__)
